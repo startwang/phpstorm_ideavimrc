@@ -23,5 +23,24 @@ nnoremap <Leader>gi :action GotoImplementation<CR>
 nnoremap <Leader>gs :action GotoSuperMethod<CR>
 *跳到测试文件
 nnoremap <Leader>gt :action GotoTest<CR>
+*弹出显示文件路径
+nnoremap <Leader>fp :action ShowFilePath<CR>
+*查找引用了当前方法的文件
+nnoremap <Leader>fu :action FindUsages<CR>
+*显示右键菜单
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
+*运行文件
+nnoremap <Leader>rc :action ChooseRunConfiguration<CR>
+*重命名变量
+nnoremap <Leader>re :action RenameElement<CR>
+
+nnoremap <Leader>rf :action RenameFile<CR>
+
+*搜索任何地方，相当于双击Shift
+nnoremap <Leader>se :action SearchEverywhere<CR>
+*搜索引用了当前变量的地方
+nnoremap <Leader>su :action ShowUsages<CR>
+
+nnoremap <Leader>tc  :action CloseActiveTab<CR>
 
 *以上为调用phpstorm自身功能
