@@ -1,0 +1,27 @@
+" 设置leader为,
+let mapleader=","
+let g:mapleader=","
+
+*补全行尾;
+map <Leader>es <esc>$a;<esc>
+
+*以下为调用phpstorm自身功能
+
+*切换tab
+nnoremap <Leader>tn gt
+nnoremap <Leader>tp gT
+
+*查找方法
+nnoremap <Leader>ga :action GotoAction<CR>
+*查找类
+nnoremap <Leader>gc :action GotoClass<CR>
+*跳到用到的方法或类
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+*跳到接口
+nnoremap <Leader>gi :action GotoImplementation<CR>
+*暂未知
+nnoremap <Leader>gs :action GotoSuperMethod<CR>
+*跳到测试文件
+nnoremap <Leader>gt :action GotoTest<CR>
+
+*以上为调用phpstorm自身功能
