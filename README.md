@@ -1,0 +1,1 @@
+# phpstorm_ideavimrc
