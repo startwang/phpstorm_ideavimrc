@@ -10,6 +10,10 @@ map <Leader>es <esc>$a;<esc>
 *切换tab
 nnoremap <Leader>tn gt
 nnoremap <Leader>tp gT
+*关闭当前tab
+nnoremap <Leader>tc  :action CloseEditor<CR>
+*关闭所有tab
+nnoremap <Leader>tac :action CloseAllEditors<CR>
 
 *查找方法
 nnoremap <Leader>ga :action GotoAction<CR>
@@ -34,13 +38,44 @@ nnoremap <Leader>rc :action ChooseRunConfiguration<CR>
 *重命名变量
 nnoremap <Leader>re :action RenameElement<CR>
 
-nnoremap <Leader>rf :action RenameFile<CR>
-
 *搜索任何地方，相当于双击Shift
 nnoremap <Leader>se :action SearchEverywhere<CR>
 *搜索引用了当前变量的地方
 nnoremap <Leader>su :action ShowUsages<CR>
 
-nnoremap <Leader>tc  :action CloseActiveTab<CR>
+*在当前文件中替换
+nnoremap <Leader>fip :action FindInPath<CR>
+
+*在当前文件中替换
+nnoremap <Leader>rf :action Replace<CR>
+*在路径中替换
+nnoremap <Leader>rip :action ReplaceInPath<CR>
+
+*退到上一次编辑的地方
+nnoremap <Leader>b :action Back<CR>
+
+*弹出当前文件所有函数
+nnoremap <Leader>fs :action FileStructurePopup<CR>
+
+*弹出切换tab
+nnoremap <Leader><Leader>s :action Switcher<CR>
 
 *以上为调用phpstorm自身功能
+
+*在插入模式中使用Ctrl+v粘贴全局剪贴板内容
+inoremap <C-v> <esc>:set paste<cr>mui<C-R>+<esc>mv'uV'v=:set nopaste<cr>
+
+*在Visual模式中使用Ctrl+c复制内容到全局剪贴板
+vnoremap <C-c> "+y
+
+*在Visual模式中使用Ctrl+x剪切内容到全局剪贴板
+vnoremap <C-x> "+x
+
+*Press `f` to activate AceJump
+nnoremap <Leader><Leader>f :action AceAction<CR>
+
+*Press `F` to activate Target Mode
+nnoremap <Leader><Leader>F :action AceTargetAction<CR>
+
+*Press `g` to activate Line Mode
+nnoremap <Leader><Leader>g :action AceLineAction<CR>
