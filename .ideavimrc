@@ -63,13 +63,14 @@ nnoremap <Leader><Leader>s :action Switcher<CR>
 *以上为调用phpstorm自身功能
 
 *在插入模式中使用Ctrl+v粘贴全局剪贴板内容
-inoremap <C-v> <esc>:set paste<cr>mui<C-R>+<esc>mv'uV'v=:set nopaste<cr>
+inoremap <C-v> <esc>"+pa
 
 *在Visual模式中使用Ctrl+c复制内容到全局剪贴板
 vnoremap <C-c> "+y
 
 *在Visual模式中使用Ctrl+x剪切内容到全局剪贴板
 vnoremap <C-x> "+x
+
 
 *Press `f` to activate AceJump
 nnoremap <Leader><Leader>f :action AceAction<CR>
