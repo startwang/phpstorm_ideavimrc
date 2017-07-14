@@ -3,16 +3,49 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Define bundles via Github repos
+
+"***********配色***********
+
 Bundle 'altercation/vim-colors-solarized'
 
-
-
-
-" 设置配色
+"===========设置配色开始===========
 if has('gui_running')
-    set background=light
+    set background=dark
 else
     set background=dark
 endif
 
 colorscheme solarized
+"===========设置配色结束===========
+
+
+"***********文件树***********
+
+Bundle 'scrooloose/nerdtree'
+
+"===========设置文件树开始===========
+
+" 自动打开
+autocmd vimenter * NERDTree
+
+" 不同扩展名显示不同的颜色
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
+"===========设置文件树结束===========
