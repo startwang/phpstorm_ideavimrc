@@ -2,6 +2,12 @@
 let mapleader=","
 let g:mapleader=","
 
+*相对行号
+set relativenumber
+
+*编辑模式下esc映射为jj
+inoremap jj <esc>
+
 *补全行尾;
 map <Leader>es <esc>$a;<esc>
 
@@ -48,6 +54,10 @@ nnoremap <Leader>fip :action FindInPath<CR>
 
 *在当前文件中替换
 nnoremap <Leader>rf :action Replace<CR>
+
+*在当前文件中查找
+nnoremap <Leader>ff :action Find<CR>
+
 *在路径中替换
 nnoremap <Leader>rip :action ReplaceInPath<CR>
 
@@ -59,6 +69,11 @@ nnoremap <Leader>fs :action FileStructurePopup<CR>
 
 *弹出切换tab
 nnoremap <Leader><Leader>s :action Switcher<CR>
+
+nnoremap <Leader>sh :action LocalHistory.ShowHistory<CR>
+
+nnoremap <Leader>fc :action ToggleFullScreen<CR>
+
 
 *以上为调用phpstorm自身功能
 
