@@ -40,6 +40,16 @@ vnoremap <C-c> "+y
 " 在Visual模式中使用Ctrl+x剪切内容到全局剪贴板
 vnoremap <C-x> "+x
 
+" 转变配色
+map <Leader>css :set ft=css.markdow<CR>
+map <Leader>html :set ft=html.markdow<CR>
+map <Leader>js :set ft=javascript.markdow<CR>
+map <Leader>md :set ft=markdown.markdow<CR>
+map <Leader>php :set ft=php.markdow<CR>
+map <Leader>py :set ft=python.markdow<CR>
+map <Leader>rb :set ft=ruby.markdow<CR>
+map <Leader>ruby :set ft=ruby.markdow<CR>
+map <Leader>sql :set ft=sql.markdow<CR>
 
 " 插件配置
 if filereadable(expand("~/.vimrc.bundles"))
