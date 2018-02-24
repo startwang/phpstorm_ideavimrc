@@ -70,10 +70,17 @@ nnoremap <Leader>fs :action FileStructurePopup<CR>
 *弹出切换tab
 nnoremap <Leader><Leader>s :action Switcher<CR>
 
+*文件编辑历史
 nnoremap <Leader>sh :action LocalHistory.ShowHistory<CR>
 
+*全屏
 nnoremap <Leader>fc :action ToggleFullScreen<CR>
 
+*调用project
+nnoremap <Leader>ap :action ActivateProjectToolWindow<CR>
+
+*调用Terminal
+nnoremap <Leader>at :action ActivateTerminalToolWindow<CR>
 
 *以上为调用phpstorm自身功能
 
