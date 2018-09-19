@@ -13,6 +13,9 @@ set encoding=utf-8
 " 相对行号
 set relativenumber
 
+" 绝对行号
+set number
+
 " 编辑模式下esc映射为jj
 inoremap jj <esc>
 
