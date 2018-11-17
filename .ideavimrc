@@ -31,8 +31,6 @@ nnoremap <Leader>gc :action GotoClass<CR>
 nnoremap <Leader>gd :action GotoDeclaration<CR>
 *跳到接口
 nnoremap <Leader>gi :action GotoImplementation<CR>
-*暂未知
-nnoremap <Leader>gs :action GotoSuperMethod<CR>
 *跳到测试文件
 nnoremap <Leader>gt :action GotoTest<CR>
 *弹出显示文件路径
@@ -50,6 +48,8 @@ nnoremap <Leader>re :action RenameElement<CR>
 nnoremap <Leader>se :action SearchEverywhere<CR>
 *搜索引用了当前变量的地方
 nnoremap <Leader>su :action ShowUsages<CR>
+*搜索方法
+nnoremap <Leader>gs :action GotoSymbol<CR>
 
 *在当前文件中替换
 nnoremap <Leader>fip :action FindInPath<CR>
